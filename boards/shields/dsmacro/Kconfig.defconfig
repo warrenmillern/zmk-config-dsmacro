@@ -1,0 +1,6 @@
+if DSMACRO
+
+config ZMK_KEYBOARD_NAME
+    default "dsmacro"
+
+endif

@@ -1,0 +1,2 @@
+config DSMACRO
+    def bool $(shields_list_contains,dsmacro)
