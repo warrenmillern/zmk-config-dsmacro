@@ -18,10 +18,10 @@
 
         bt_layer {
             bindings = <
-                &bt BT_SEL0 &none   &none       &none   &none
-                &bt BT_SEL1 &none   &none       &none   &none
-                &bt BT_SEL2 &none   &none       &none   &none
-                                    &bootloader &none   &none   
+                &bt BT_SEL 0 &none   &none       &none   &none
+                &bt BT_SEL 1 &none   &none       &none   &none
+                &bt BT_SEL 2 &none   &none       &none   &none
+                                     &bootloader &none   &none   
             >;
         };
     };
