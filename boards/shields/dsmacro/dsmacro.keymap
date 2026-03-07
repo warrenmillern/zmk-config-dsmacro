@@ -5,6 +5,7 @@
 / {  
     keymap {
         compatible = "zmk,keymap";
+        physical-layout = <&dsmacro_physical_layout>;
 
         base_layer {
             display-name = "Base";
@@ -18,10 +19,10 @@
 
         bt_layer {
             bindings = <
-                &bt BT_SEL 0 &none   &none       &none   &none
-                &bt BT_SEL 1 &none   &none       &none   &none
-                &bt BT_SEL 2 &none   &none       &none   &none
-                                     &bootloader &none   &none   
+                &bt BT_SEL 0 &none   &none       &none          &none
+                &bt BT_SEL 1 &none   &none       &none          &none
+                &bt BT_SEL 2 &none   &none       &none          &none
+                                     &bootloader &studio_unlock &none   
             >;
         };
     };
