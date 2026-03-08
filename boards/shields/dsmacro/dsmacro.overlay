@@ -67,19 +67,3 @@
         zmk,physical-layout = &dsmacro_physical_layout;
     };
 };
-```
-
-**dsmacro.conf** — added BLE experimental connection and default output:
-```
-CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
-CONFIG_ZMK_OUTPUT_DEFAULT=1
-```
-
-**defconfig** — unchanged, no modifications needed:
-```
-if DSMACRO
-
-config ZMK_KEYBOARD_NAME
-    default "dsmacro"
-
-endif
