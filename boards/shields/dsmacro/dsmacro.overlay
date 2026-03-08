@@ -5,6 +5,8 @@
     kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
+        debounce-press-ms = <8>;
+        debounce-release-ms = <8>;
         
         col-gpios
 	    = <&pro_micro 4 GPIO_ACTIVE_HIGH>
@@ -26,7 +28,7 @@
         compatible = "zmk,matrix-transform";
         columns = <5>;
         rows = <4>;
-        map = <
+        map = 
             RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4)
             RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4)
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)
@@ -38,26 +40,22 @@
         compatible = "zmk,physical-layout";
         display-name = "DSMacro Layout";
         transform = <&default_transform>;
-
-        keys = <
+        keys = 
             &key_physical_attrs 100 100   0   0   0 0 0
             &key_physical_attrs 100 100 100   0   0 0 0
             &key_physical_attrs 100 100 200   0   0 0 0
             &key_physical_attrs 100 100 300   0   0 0 0
             &key_physical_attrs 100 100 400   0   0 0 0
-
             &key_physical_attrs 100 100   0 100   0 0 0
             &key_physical_attrs 100 100 100 100   0 0 0
             &key_physical_attrs 100 100 200 100   0 0 0
             &key_physical_attrs 100 100 300 100   0 0 0
             &key_physical_attrs 100 100 400 100   0 0 0
-
             &key_physical_attrs 100 100   0 200   0 0 0
             &key_physical_attrs 100 100 100 200   0 0 0
             &key_physical_attrs 100 100 200 200   0 0 0
             &key_physical_attrs 100 100 300 200   0 0 0
             &key_physical_attrs 100 100 400 200   0 0 0
-
             &key_physical_attrs 100 100 300 300 1750 300 300
             &key_physical_attrs 100 100 400 300 1750 300 300
             &key_physical_attrs 150 100 500 300 1750 300 300
@@ -69,3 +67,19 @@
         zmk,physical-layout = &dsmacro_physical_layout;
     };
 };
+```
+
+**dsmacro.conf** — added BLE experimental connection and default output:
+```
+CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
+CONFIG_ZMK_OUTPUT_DEFAULT=1
+```
+
+**defconfig** — unchanged, no modifications needed:
+```
+if DSMACRO
+
+config ZMK_KEYBOARD_NAME
+    default "dsmacro"
+
+endif
