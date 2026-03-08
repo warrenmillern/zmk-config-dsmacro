@@ -30,10 +30,10 @@
         base_layer {
             display-name = "Base";
             bindings = < 
-                &kp F13     &kp F14     &kp F15     &kp LC(LS(V))                   &kp LC(LS(C))
-                &kp F16     &kp F17     &kp F18     &kp &paste_ht LG(LA(V)) LC(V)   &kp LC(C)
-                &kp ENTER   &kp F19     &kp F20     &kp LC(Y)                       &kp LC(Z)
-                                        &kp LSHIFT  &kp DEL                         &kp ESC
+                &kp F13     &kp F14     &kp F15     &kp LC(LS(V))               &kp LC(LS(C))
+                &kp F16     &kp F17     &kp F18     &paste_ht LG(LA(V)) LC(V)   &kp LC(C)
+                &kp ENTER   &kp F19     &kp F20     &kp LC(Y)                   &kp LC(Z)
+                                        &kp LSHIFT  &kp DEL                     &kp ESC
             >;
         };
 
